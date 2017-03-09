@@ -1,0 +1,22 @@
+2017-03-09 Thirsday 9:34
+
+Python:
+1. xrange
+2. 面向对象的三要素
+3. django创建应用的命令
+
+	django-admin.py startproject mysite
+	python manage.py startapp books
+
+4. is 与 == 的区别
+
+	Python中的对象包含三要素：id、type、value
+	其中id用来唯一标识一个对象，type标识对象的类型，value是对象的值
+	is判断的是a对象是否就是b对象，是通过id来判断的
+	==判断的是a对象的值是否和b对象的值相等，是通过value来判断的
+
+5. 装饰器的本质是什么？是类、对象还是什么？
+6. 简述python内存管理
+
+
+
