@@ -2,7 +2,14 @@
 
 Python:
 1. xrange
+	
+	xrange 和range 的用法完全相同，但是返回的是一个生成器。
+	在循环中尽量使用 xrange 这样性能可以得到提高，除非你要返回一个列表。
+
 2. 面向对象的三要素
+
+	封装、集成、多态。
+
 3. django创建应用的命令
 
 	django-admin.py startproject mysite
@@ -18,5 +25,14 @@ Python:
 5. 装饰器的本质是什么？是类、对象还是什么？
 6. 简述python内存管理
 
+	内存管理：
+		C 		==》	手工管理
+		Java	==》	垃圾回收
+		
+7. Python中的数据类型
+
+	检测数据类型的函数：
+		* type()	# type(1.0)
+		* isintance(v, type)
 
 
