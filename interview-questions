@@ -8,7 +8,7 @@ Python:
 
 2. 面向对象的三要素
 
-	封装、集成、多态。
+	封装、继承、多态。
 
 3. django创建应用的命令
 
@@ -31,8 +31,61 @@ Python:
 		
 7. Python中的数据类型
 
+	* python变量无需声明;
+	* python中，一切事物皆是对象，所有变量都是引用类型变量; 【Python中变量是无类型的，对象是有类型的，并且一个对象的类型是不可改变的，所以Python是强类型语言。tuple([2,6,8])不会把列表变成元组,而是根据一个列表对象新建一个元组对象。】【 Python中的对象分为immutable object和mutable object，前一个是不可变对象，例如字符串，整数，元组等，后面的是可变对象，例如列表，bytearray（In Python 3.0+）等。】
+	* del 操作符可删除对象的引用。e.g.-->a=1; b=2; del a,b; print a --->name 'a' is not defined
+
 	检测数据类型的函数：
 		* type()	# type(1.0)
-		* isintance(v, type)
+		* isintance(v, type)	# isinstance() arg 2 must be a class, type, or tuple of classes and types. e.g.-->isinstance(lst, (list, int, bool, str))
+
+	数据类型：int, long, float, str, bool, list, dict, tuple, object, type, classobj(自定义类), instance(由类生成的对象), time.struct_time, datetime.datetime
+			int: -9223372036854775808--9223372036854775807  19位 最大的int值：sys.maxint
+			list: 
+				删除元素--> li.remove('aaa')	li.pop(index)	del li[index]
+				list.count(obj) 统计某个元素在列表中出现的次数
+				list.extend(seq) 在列表末尾一次性追加另一个序列中的多个值(用新列表扩展原来的列表)
+				list.index(obj) 从列表中找出某个值第一个匹配项的索引位置，索引从0开始
+				list.insert(index, obj) 将对象插入列表
+				list.remove(obj) 移除列表中某个值的第一个匹配项
+				list.reverse() 反向列表中元素，倒转
+				list.sort([func]) 对原列表进行排序
+			tuple: 
+				tup3 = "a", "b", "c", "d";
+				元组中只有一个元素时，需要在元素后面添加逗号，例如：tup1 = (50,);
+				cmp(tuple1, tuple2) 比较两个元组元素。
+
+	对象类型判断：
+		isinstance(list, type) 		-->
+		isinstance(list, object)  	-->
+			
+	数据类型转换：
+		* cmp(x, y) 如果 x < y 返回 -1, 如果 x == y 返回 0, 如果 x > y 返回 1
+		* repr(x) 将对象x转换为表达式字符串
+		* eval(str) 用来计算在字符串中的有效Python表达式,并返回一个对象
+		* tuple(s)	e.g.--> tuple('abc')-->('a','b','c'); 
+		* chr(x) 将一个整数转换为一个字符 
+		* unichr(x) 将一个整数转换为Unicode字符 
+		* ord(x) 取得字符的字符编码
+		* hex(x) 将一个整数转换为一个十六进制字符串
+		* oct(x) 将一个整数转换为一个八进制字符串
+
+	数学函数:
+		* abs(x)    返回数字的绝对值，如abs(-10) 返回 10
+		* ceil(x)    返回数字的上入整数，如math.ceil(4.1) 返回 5
+		* floor(x) 返回数字的下舍整数，如math.floor(4.9)返回 4
+		* max(x1, x2,...)    返回给定参数的最大值，参数可以为序列。
+		* min(x1, x2,...)    返回给定参数的最小值，参数可以为序列。
+		* pow(x, y) x**y 运算后的值。
+		* round(x [,n]) 返回浮点数x的四舍五入值，如给出n值，则代表舍入到小数点后的位数。
+		* math.sqrt(x)    返回数字x的平方根
+
+
+8. Python中的特殊概念
+==================================
+dir()
+生成器generator: ()
+迭代器iterator: 
+推导式comprehensions(又称解析式)
 
 
